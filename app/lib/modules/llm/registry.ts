@@ -17,6 +17,7 @@ import HyperbolicProvider from './providers/hyperbolic';
 import AmazonBedrockProvider from './providers/amazon-bedrock';
 import GithubProvider from './providers/github';
 import MoonshotProvider from './providers/moonshot';
+import AzureProvider from './providers/azure';
 
 export {
   AnthropicProvider,
@@ -38,4 +39,5 @@ export {
   LMStudioProvider,
   AmazonBedrockProvider,
   GithubProvider,
+  AzureProvider,
 };

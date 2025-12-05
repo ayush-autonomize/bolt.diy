@@ -1,0 +1,20 @@
+# Changelog
+
+## Added Azure OpenAI Provider
+- **New File**: `app/lib/modules/llm/providers/azure.ts`
+  - Implemented `AzureProvider` class extending `BaseProvider`.
+  - Configured to use `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT`, and `AZURE_OPENAI_DEPLOYMENT_NAME`.
+  - Uses `@ai-sdk/openai` with custom fetch for API versioning (`2024-02-15-preview`).
+- **Modified**: `app/lib/modules/llm/registry.ts`
+  - Registered `AzureProvider` in the provider registry.
+- **Modified**: `package.json`
+  - Added `@ai-sdk/azure` dependency (though the implementation uses `@ai-sdk/openai`).
+
+## Bug Fixes
+- **Modified**: `app/utils/selectStarterTemplate.ts`
+  - Fixed a bug where the `model` object was being passed directly to the API instead of the model name string.
+  - This resolved a 404 error when using Claude 3.5 Sonnet.
+
+## Scripts
+- **New File**: `scripts/test-azure.ts`
+  - Added a script to test Azure OpenAI integration.
