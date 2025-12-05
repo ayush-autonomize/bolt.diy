@@ -18,3 +18,13 @@
 ## Scripts
 - **New File**: `scripts/test-azure.ts`
   - Added a script to test Azure OpenAI integration.
+
+## Anthropic Provider Updates
+- **Modified**: `app/lib/modules/llm/providers/anthropic.ts`
+  - Updated the list of static models to include newer versions available in the API:
+    - Claude 4.5 Sonnet (`claude-sonnet-4-5-20250929`)
+    - Claude 4.5 Opus (`claude-opus-4-5-20251101`)
+    - Claude 3.7 Sonnet (`claude-3-7-sonnet-20250219`)
+    - Claude 3.5 Haiku (`claude-3-5-haiku-20241022`)
+  - Removed unavailable `claude-3-5-sonnet-20241022` model.
+  - Corrected `maxCompletionTokens` for Claude 4.5 Sonnet to 64,000.
